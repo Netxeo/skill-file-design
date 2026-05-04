@@ -1,0 +1,22 @@
+{
+  "name": "@netxeo/design-skill",
+  "version": "1.0.0",
+  "description": "An Autonomous Art Director AI Skill that eradicates the 'AI Look' and generates production-ready frontend code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ai", "design", "frontend", "claude", "cursor", "windsurf", "art-director", "ui", "ux"],
+  "author": "Netxeo",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "design-skill": "install.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.3.0",
+    "clipboardy": "^5.3.1",
+    "commander": "^14.0.3",
+    "picocolors": "^1.1.1"
+  }
+}
