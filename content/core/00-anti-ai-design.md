@@ -1,5 +1,10 @@
 # 🚫 00. Anti-AI Design Protocol (The 100 "AI Tells" & Human Solutions)
 
+### 🚨 THE ABSOLUTE ARCHITECTURAL DIRECTIVE
+**01. The "Max-Width Trap" (The Constricted Layout)**
+*   **The AI Tell:** Defaulting to `max-w-5xl`, `max-w-7xl`, `max-w-[1400px]`, or `container mx-auto` on every section, leaving huge empty margins on 1920px+ screens and making the content feel unnaturally compressed and rigid.
+*   **The Human Solution:** Modern web design demands breathing room. You MUST use completely fluid layouts (`w-[90%] mx-auto` or `w-full px-[5%]`). Only use constrained centered containers when it is a deliberate artistic choice for extreme readability (like a blog post text column), never as a default layout grid for a landing page. This rule supersedes all others.
+
 To pass as premium human work, the AI must aggressively avoid the following 100 "AI Tells" across Layout, Visuals, Typography, Components, Motion, and Code. Every generated output must be evaluated against this protocol.
 
 ## A. Layout, Grid & Spatial Tells (1-20)
