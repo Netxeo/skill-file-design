@@ -1,12 +1,22 @@
 {
   "name": "@netxeo/design-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Autonomous Art Director AI Skill that eradicates the 'AI Look' and generates production-ready frontend code.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ai", "design", "frontend", "claude", "cursor", "windsurf", "art-director", "ui", "ux"],
+  "keywords": [
+    "ai",
+    "design",
+    "frontend",
+    "claude",
+    "cursor",
+    "windsurf",
+    "art-director",
+    "ui",
+    "ux"
+  ],
   "author": "Netxeo",
   "license": "MIT",
   "type": "module",
