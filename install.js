@@ -73,6 +73,20 @@ const moodCorrelations = {
   'custom': ['42-advanced-ui-and-ux-concepts.md', 'none']
 };
 
+const iconCorrelations = {
+  '31-core-aesthetics.md': 'Lucide Icons (Clean, neutral, modern)',
+  '22-maximalism-and-brutalism.md': 'Phosphor Icons (Bold or Fill weight for heavy impact)',
+  '21-retro-and-nostalgia.md': 'Pixelarticons or Phosphor Icons (Duotone weight)',
+  '23-cinematic-and-photography.md': 'Radix Icons (Ultra-minimalist, thin)',
+  '26-3d-and-motion-design.md': 'Lucide Icons (Lightweight to not distract from 3D)',
+  '35-experimental-and-anti-ux.md': 'Remix Icon (Solid/Abstract)',
+  '30-classical-fine-art.md': 'Radix Icons (Elegant, unobtrusive)',
+  '29-analog-and-vintage-tech.md': 'Phosphor Icons (Regular weight, technical feel)',
+  '38-typography-and-layout-art.md': 'Phosphor Icons (Light weight, typographic harmony)',
+  '25-illustration-and-2d-art.md': 'Heroicons (Outline)',
+  'custom': 'Lucide Icons (Versatile)'
+};
+
 const labelsMap = {
   '31-core-aesthetics.md': 'Clean, Modern, Corporate',
   '22-maximalism-and-brutalism.md': 'Maximalism & Brutalism (Aggressive, bold)',
@@ -380,6 +394,8 @@ I have detected that the user already has existing design rules, custom instruct
 Do NOT conflict with or overwrite their pre-existing design decisions. Harmonize my "Anti-AI" principles with their existing stack and preferences to create the ultimate result.
 ` : '';
 
+  const iconLibrary = iconCorrelations[mood] || iconCorrelations['custom'];
+
   const finalPrompt = `
 # SYSTEM ROLE: AUTONOMOUS ART DIRECTOR & SENIOR FRONTEND DEV
 
@@ -392,6 +408,7 @@ To achieve this, rigorously apply the variables and constraints chosen below.
 - **Framework:** ${framework}
 - **Styling:** ${styling}
 - **Animation:** ${animation}
+- **Icons:** ${iconLibrary}
 CRITICAL: Write the actual code using this exact stack. Do not hallucinate or use libraries not listed here.
 
 ---

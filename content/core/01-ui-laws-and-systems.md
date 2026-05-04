@@ -111,3 +111,10 @@ This module dictates the strict visual and mathematical laws governing UI constr
 98. **Text Reveal:** Animate headers by revealing them line by line from behind a mask, rather than fading the whole block.
 99. **Interaction Cost:** Every click, scroll, and drag is a tax. Reduce the interaction cost to achieve the goal.
 100. **The Rule of Delight:** At least one interaction per flow should make the user smile or feel deeply satisfied.
+
+## F. Engineering & Accessibility (101-105)
+101. **Absolute Accessibility (WCAG & ARIA):** Never sacrifice accessibility for aesthetics. Every interactive element must have `aria-label`, correct `role` attributes, and be fully navigable via keyboard (`tabindex`).
+102. **No Raw SVG Clutter:** Never dump hundreds of lines of raw SVG code into your components. You MUST use a clean, modern icon library (like Lucide, Phosphor, or Radix Icons) unless the user explicitly provides a custom SVG.
+103. **Design Tokens & CSS Variables:** Always use CSS variables (or Tailwind configuration) for colors, spacing, and typography. Hardcoding hex values across components is forbidden.
+104. **Native Dark Mode:** Structure your color tokens so that switching to dark mode simply requires toggling the CSS variables on the `:root` or `html.dark` element.
+105. **Semantic HTML5:** Always use `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, and `<time>` instead of generic `<div>` tags to provide structural meaning to screen readers.
