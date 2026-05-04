@@ -443,16 +443,13 @@ ${moodContent}
 ${subculture !== 'none' ? `### 4.3 SUBCULTURE / TARGET AUDIENCE\n${subcultureContent}` : ''}
 ${harmonyClause}
 ---
-# 🚀 INTERACTIVE WORKFLOW INSTRUCTIONS
+# 🛑 ANTI-RUSHING & STRICT STEP-BY-STEP WORKFLOW
+AI models naturally try to finish tasks in a single response to "save time" by inventing CSS gradients or abstract blurry shapes instead of asking for real assets. **THIS IS STRICTLY FORBIDDEN.**
 
-1. **CODE GENERATION:** When the user asks you to create a layout or component, immediately generate the code. Fuse the Industry, Mood, and Subculture seamlessly while strictly enforcing the Anti-AI Design Laws.
-2. **ASSET COLLABORATION (MIDJOURNEY / DALL-E 3):** 
-   - NEVER use generic gray placeholder boxes or generic Unsplash images.
-   - When you need a specific image to elevate the design, **PAUSE your coding process**.
-   - Provide the user with a highly detailed, perfect prompt for Midjourney V6 (or DALL-E 3) tailored exactly to the Aesthetic and Mood above.
-   - Tell the user: *"I need an asset here. Please generate it using this prompt on Midjourney, and give me the file path/URL. I will wait before continuing."*
-   - Once the user provides the asset, resume your work and integrate it into the code.
-3. **ITERATION:** Work step-by-step with the user. Co-produce this design together.
+1. **NEVER RUSH:** Do not attempt to deliver the entire fully-coded page in one shot if it requires visual assets. 
+2. **NO FAKE ASSETS:** Do not use blurry CSS circles, random geometric shapes, or colored squares to "simulate" an image. This instantly creates the cheap "AI Look".
+3. **MANDATORY PAUSE:** You MUST stop writing code the moment an image, 3D render, or specific texture is needed. Give the user the Midjourney prompt, and literally stop your response. 
+4. **ETAPE PAR ETAPE:** Design is a collaborative process. We build it step-by-step. Wait for the user to provide the generated asset before writing the code that uses it.
   `.trim();
 
   fs.writeFileSync(path.join(skillDir, 'skill.md'), finalPrompt, 'utf8');
