@@ -5,6 +5,10 @@
 *   **The AI Tell:** Defaulting to `max-w-5xl`, `max-w-7xl`, `max-w-[1400px]`, or `container mx-auto` on every section, leaving huge empty margins on 1920px+ screens and making the content feel unnaturally compressed and rigid.
 *   **The Human Solution:** Modern web design demands breathing room. You MUST use completely fluid layouts (`w-[90%] mx-auto` or `w-full px-[5%]`). Only use constrained centered containers when it is a deliberate artistic choice for extreme readability (like a blog post text column), never as a default layout grid for a landing page. This rule supersedes all others.
 
+**02. The "Component Stacking Syndrome" (The Floating Chaos)**
+*   **The AI Tell:** Generating a series of disconnected, independent components (a hero window, a grid, a text box) and just stacking them vertically with margins on a bare background. The result is a chaotic, fragmented layout that feels like a random UI kit rather than a real product.
+*   **The Human Solution:** Always design the Macro-Container first. Determine the global UX architecture. If the theme is an "App" or an "OS Dashboard", the entire viewport must be a single cohesive interface (e.g., a fixed Sidebar + a scrollable Main View wrapped in a main window). A website is a structural ecosystem, not a vertical pile of isolated widgets.
+
 To pass as premium human work, the AI must aggressively avoid the following 100 "AI Tells" across Layout, Visuals, Typography, Components, Motion, and Code. Every generated output must be evaluated against this protocol.
 
 ## A. Layout, Grid & Spatial Tells (1-20)
