@@ -70,11 +70,18 @@ Do you already use popular community skills like *Impeccable*, *Front-end design
 
 ## 👨‍💻 Usage
 
-Once installed, simply ask your AI (in Cursor, Windsurf, or Claude) to build a component or page:
+Once installed, simply type the trigger command in your AI assistant (Cursor, Windsurf, or Claude):
 
-> *"Build a landing page for my new crypto wallet app."*
+> **`/design`** *Build a landing page for my new crypto wallet app.*
 
-The AI will automatically read `.skills/design/skill.md`, adopt the aesthetic you chose during installation, and write spectacular code. If it needs an image, it will pause and ask you to generate it on Midjourney first!
+The AI will automatically adopt the aesthetic you chose and launch a **Strict 6-Step Professional Workflow**:
+
+1. **Research & Analysis:** Understands your brand and industry.
+2. **Architecture (UX):** Defines the user flow and sitemap.
+3. **Style Guide (DA):** Uses your existing branding or creates a cohesive Design System from scratch (colors, typography, moodboards).
+4. **Copywriting:** Writes the exact content.
+5. **Design & Implementation (UI):** Writes spectacular code. If it needs an image, it will pause and ask you to generate it on Midjourney first!
+6. **Responsive Polish:** Ensures perfect rendering on mobile/tablet.
 
 ---
 

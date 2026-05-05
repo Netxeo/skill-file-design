@@ -279,6 +279,17 @@ async function main() {
   });
   checkCancel(ambition);
 
+  // --- 4.5. BRANDING & STYLE GUIDE ---
+  const brandingStatus = await select({
+    message: 'Do you already have a Branding / Style Guide for this project?',
+    options: [
+      { value: 'has_guide', label: 'Yes, I have a Style Guide (I will provide it to the AI)' },
+      { value: 'needs_guide', label: 'No, but I want to create one with the AI' },
+      { value: 'auto_guide', label: 'No, I want the AI to create it automatically' }
+    ]
+  });
+  checkCancel(brandingStatus);
+
   // --- 5. TECH STACK ---
   const framework = await select({
     message: 'Which Frontend Framework?',
@@ -323,6 +334,7 @@ async function main() {
   const coreUiLaws = readFile('content/core/01-ui-laws-and-systems.md');
   const coreUxHuman = readFile('content/core/02-ux-human-psychology.md');
   const coreCreativeTech = readFile('content/core/03-creative-technologies.md');
+  const coreAntiAiCopy = readFile('content/core/04-anti-ai-copywriting.md');
 
   // 2. Load Selected Modules
   const industryContent = industry === 'custom' 
@@ -386,6 +398,9 @@ ${coreUxHuman}
 ### 3.4 CREATIVE TECHNOLOGIES
 ${coreCreativeTech}
 
+### 3.5 ANTI-AI COPYWRITING LAWS
+${coreAntiAiCopy}
+
 ---
 ## 4. AESTHETIC DIRECTIVES
 ### 4.1 INDUSTRY CONTEXT
@@ -397,16 +412,37 @@ ${moodContent}
 ${subculture !== 'none' ? `### 4.3 SUBCULTURE / TARGET AUDIENCE\n${subcultureContent}` : ''}
 
 ---
-# 🚀 INTERACTIVE WORKFLOW INSTRUCTIONS
+# 🚀 INTERACTIVE WORKFLOW INSTRUCTIONS (STRICT 6-STEP PROCESS)
 
-1. **CODE GENERATION:** When the user asks you to create a layout, component, or page, you must immediately generate the code. Fuse the Industry, Mood, and Subculture seamlessly while strictly enforcing the Anti-AI Design Laws.
-2. **ASSET COLLABORATION (MIDJOURNEY / DALL-E 3):** 
-   - NEVER use generic gray placeholder boxes or generic Unsplash images.
-   - When you need a specific image/asset to elevate the design, **PAUSE your coding process**.
-   - Provide the user with a highly detailed, perfect prompt for Midjourney V6 (or DALL-E 3) tailored exactly to the Aesthetic and Mood chosen above.
-   - Tell the user: *"I need an asset here. Please generate it using this prompt on Midjourney, and give me the file path/URL. I will wait before continuing."*
-   - Once the user provides the asset, resume your work and integrate it into the code.
-3. **ITERATION:** Work step-by-step with the user. If you need another asset later, ask for it using the exact same interactive method. You are co-producing this design together.
+**TRIGGER:** When the user types \`/design\` or asks you to create/design a project, you MUST act as a professional Art Director and follow this exact sequence. Do not skip steps or jump straight to coding.
+
+**STEP 1: RESEARCH & ANALYSIS**
+Understand the user's project, industry, and target audience. Define the core brand essence.
+
+**STEP 2: ARCHITECTURE (UX & USER FLOW)**
+Do NOT settle for a generic 5-section layout. Push the boundaries to an Awwwards level.
+Define a highly immersive, thematic sitemap and page structure (aiming for 7 to 10 unique, interactive sections). Explain the interactive purpose of each section and how it fits the project's theme.
+
+**STEP 3: BRAND BIBLE & DESIGN SYSTEM (DA)**
+*   **Context:** ${brandingStatus === 'has_guide' ? "The user HAS a style guide. Ask them to provide it and base EVERYTHING on it to ensure perfect brand consistency." : "The user DOES NOT have a style guide. You MUST act as an elite Art Director and create a comprehensive Brand Bible from scratch."}
+*   If creating the Brand Bible, you MUST explicitly detail:
+    1. **Brand Philosophy & Positioning:** The core concept and emotional intent.
+    2. **Tone of Voice:** How the copy sounds (e.g., robotic, poetic, aggressive).
+    3. **Chromatic System:** Primary, Surface, Active, Alert, Success colors with specific hex codes and rationales.
+    4. **Typography & Hierarchy:** Specific fonts for headers, body, and data, including rendering rules.
+    5. **Iconography & Asset Rules:** Strict rules for images (e.g., dithering, duotone) and UI icons.
+    6. **Micro-interactions:** Hover states, active states, cursors, and transition physics.
+*   Do not proceed to copywriting or code until the user validates this detailed Architecture and Brand Bible.
+
+**STEP 4: COPYWRITING & CONTENT**
+Write the exact, final copy ("mot pour mot") for the interface. Do not use placeholders.
+
+**STEP 5: VISUAL DESIGN & IMPLEMENTATION (UI)**
+*   ONLY start writing code once Steps 1-4 are validated by the user.
+*   **ASSET COLLABORATION:** NEVER use generic gray placeholder boxes or generic Unsplash images. Pause coding, provide a highly detailed Midjourney/DALL-E prompt, and wait for the user to provide the image before continuing.
+
+**STEP 6: RESPONSIVE & POLISH**
+Optimize for all mobile and tablet breakpoints. Ensure text never overflows, spacing is perfect, and UX remains flawless on all screens.
   `.trim();
 
   // 5. Save to output file & Copy to clipboard

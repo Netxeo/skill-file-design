@@ -1030,3 +1030,7 @@ To pass as premium human work, the AI must aggressively avoid the following 100 
 **250. The "Un-cancelable" Network Request**
 *   **The AI Tell:** A user navigates away from a page while a slow API request is loading, causing a React "memory leak" state update error when it finally finishes.
 *   **The Human Solution:** Use `AbortController` to cancel pending fetch requests when components unmount.
+
+**251. Iconography Hallucination (Broken SVGs)**
+*   **The AI Tell:** Generating massive, complex, and often broken raw SVG paths randomly for icons in the code.
+*   **The Human Solution:** ALWAYS use a human, open-source icon library that fits the DA (e.g., `lucide-react`, `phosphor-icons`, `@radix-ui/react-icons`). Import them properly and use them consistently. Never generate raw SVG paths unless it is a very specific, simple geometric shape.
