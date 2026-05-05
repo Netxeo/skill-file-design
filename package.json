@@ -1,6 +1,6 @@
 {
   "name": "@netxeo/design-skill",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An Autonomous Art Director AI Skill that eradicates the 'AI Look' and generates production-ready frontend code.",
   "main": "index.js",
   "scripts": {
